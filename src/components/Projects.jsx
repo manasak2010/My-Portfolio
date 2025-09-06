@@ -137,7 +137,7 @@ function Projects() {
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 bg-green-600 text-white w-full px-4 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105"
+                                    className="inline-flex items-center justify-center gap-2 bg-green-600 text-white w-full px-4 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105 cursor-pointer"
                                 >
                                     <Github className='w-5 h-5' />
                                     View Project
