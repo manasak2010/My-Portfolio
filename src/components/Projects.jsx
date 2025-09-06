@@ -151,7 +151,7 @@ function Projects() {
                     <div className={`text-center transition-opacity duration-1000 mt-16 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                         <button
                             onClick={handleViewAll}
-                            className='bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105'
+                            className='bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105 cursor-pointer'
                         >
                             View All Projects
                         </button>
