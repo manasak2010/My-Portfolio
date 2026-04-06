@@ -1,71 +1,49 @@
-# Manasa Kumari | Portfolio
+# Manasa Kumari
+### Software Engineer | Full-Stack Developer | Aspiring AI/ML Engineer
 
-Personal portfolio website built with React and Vite to showcase my work in software engineering, full-stack development, and AI/ML projects.
-
-## Live Demo
-
-Add your deployed link here: `https://your-portfolio-url`
-
-## Highlights
-
-- Clean, responsive, single-page portfolio design
-- Animated hero section with dynamic role typing
-- Dedicated sections for About, Experience, Skills, Projects, and Publications
-- Contact form with EmailJS integration for direct outreach
-- Social links to GitHub and LinkedIn
-
-## Tech Stack
-
-- React
-- Vite
-- Tailwind CSS
-- Lucide React
-- EmailJS
-
-## Run Locally
-
-```bash
-# 1) Clone repository
-git clone https://github.com/manasak2010/My-Portfolio.git
-
-# 2) Open project
-cd My-Portfolio/manasa_portfolio
-
-# 3) Install dependencies
-npm install
-
-# 4) Start development server
-npm run dev
-```
-
-App runs at `http://localhost:5173/` by default.
-
-## Build for Production
-
-```bash
-npm run build
-npm run preview
-```
-
-## Project Structure
-
-```text
-manasa_portfolio/
-  src/
-    components/
-    assets/
-    App.jsx
-    main.jsx
-  public/
-  vite.config.js
-```
-
-## Contact
-
-- Email: `manasakumari2024@gmail.com`
-- GitHub: [manasak2010](https://github.com/manasak2010)
-- LinkedIn: [manasakumari](https://www.linkedin.com/in/manasakumari/)
+[![Portfolio](https://img.shields.io/badge/Live_Portfolio-Visit-22c55e?style=for-the-badge)](https://manasakumari.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manasakumari/)
+[![GitHub](https://img.shields.io/badge/GitHub-@manasak2010-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manasak2010)
 
 ---
 
-If you like this project, consider giving it a star.
+## Welcome
+
+Hi, I am Manasa.  
+I build intelligent, user-focused applications from idea to deployment, combining software engineering with AI/ML to solve real-world problems.
+
+This repository is my digital introduction. It reflects my journey, my work, and the direction I am growing as an engineer.
+
+---
+
+## About Me
+
+- Building full-stack products with clean architecture and thoughtful UI
+- Developing practical AI-powered solutions with real user impact
+- Continuously learning and improving through projects and experimentation
+- Focused on writing maintainable, scalable, and meaningful software
+
+---
+
+## What This Portfolio Represents
+
+- My selected projects across software engineering and AI/ML
+- My technical growth, problem-solving style, and engineering mindset
+- My commitment to continuous learning and high-quality work
+
+---
+
+## Career Objective
+
+To contribute as an engineer who can bridge intelligent systems and polished product experiences.
+
+I want to work on products where technology solves meaningful problems for people.
+
+---
+
+## Contact
+
+- **Portfolio:** [manasakumari.vercel.app](https://manasakumari.vercel.app/)
+- **GitHub:** [github.com/manasak2010](https://github.com/manasak2010)
+- **LinkedIn:** [linkedin.com/in/manasakumari](https://www.linkedin.com/in/manasakumari/)
+- **Email:** `manasakumari2024@gmail.com`
