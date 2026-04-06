@@ -112,11 +112,11 @@ function Projects() {
                     </p>
                 </div>
 
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-16'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12'>
                     {projects.slice(0, visibleProjects).map((project, index) => (
                         <div
                             key={project.id}
-                            className={`group bg-slate-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-700 hover:border-green-500 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                            className={`group bg-slate-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-700 hover:border-green-500 hover:scale-[1.02] md:hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                             style={{ transitionDelay: `${(index) * 150}ms` }}
                         >
                             <div className="relative overflow-hidden">

@@ -4,18 +4,21 @@ function Skills() {
     const [isVisible, setIsVisible] = useState(false);
     
     useEffect(() => {
-        const observer = new IntersectionObserver(
+        const element = document.getElementById('skills');
+        // Fallback: always show on mobile (width < 768px)
+        if (window.innerWidth < 768) {
+            setIsVisible(true);
+            return;
+        }
+        const observer = new window.IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.15 }
         );
-
-        const element = document.getElementById('skills');
         if (element) observer.observe(element);
-        
         return () => observer.disconnect();
     }, []);
 
@@ -78,7 +81,7 @@ function Skills() {
 
 
     return (
-        <section id="skills" className="py-24 bg-slate-900 relative overflow-hidden">
+    <section id="skills" className="py-24 bg-slate-900 relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-green-600/10 rounded-full blur-3xl"></div>
@@ -87,7 +90,7 @@ function Skills() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}> 
                     <p className="text-green-400 font-semibold text-lg mb-4">Technical Expertise</p>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">My Skills</h2>
                     <p className="text-gray-300 text-lg max-w-3xl mx-auto">
@@ -95,11 +98,11 @@ function Skills() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {skillCategories.map((category, index) => (
                         <div 
                             key={index}
-                            className={`bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                            className={`bg-white/5 backdrop-blur-xl rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:scale-[1.02] md:hover:scale-105 hover:shadow-lg hover:shadow-green-500/10 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             <div className="flex items-center mb-4">

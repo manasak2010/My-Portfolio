@@ -10,7 +10,7 @@ function About() {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
                 }
-            }, { threshold: 0.3 });
+            }, { threshold: 0.1 });
         const element = document.getElementById('about');
         if (element) observer.observe(element);
         return () => { observer.disconnect(); };
@@ -45,7 +45,7 @@ function About() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                     {/* Left Column - Education */}
                     <div>
                         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
@@ -77,7 +77,7 @@ function About() {
                     <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                         <div className="space-y-4">
                             <p className="text-green-400 font-semibold text-lg">About Me</p>
-                            <h2 className="text-4xl md:text-5xl font-bold text-white">Why hire me for your <br /><span>next project?</span></h2>
+                            <h2 className="text-4xl md:text-5xl font-bold text-white">Why hire me for your <br className="hidden md:inline" /><span>next project?</span></h2>
                             <p className="text-green-400 font-semibold">AI Engineer & Full Stack Developer</p>
                         </div>
                         <div className="space-y-6 text-gray-300 leading-relaxed ">

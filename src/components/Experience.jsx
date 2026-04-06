@@ -19,7 +19,7 @@ function Experience() {
                 }
             });
         }, { 
-            threshold: 0.1, // Lower threshold
+            threshold: 0.05, // Lower threshold for mobile
         });
         const timelineElement = document.querySelector('.timeline-line');
         const experienceItems = document.querySelectorAll('.experience-item');
@@ -84,7 +84,7 @@ function Experience() {
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
             <div className="absolute top-1/2 left-10 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-green-600/5 to-transparent"></div>
         </div>
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
             <div className="text-center mb-16">
                 <p className="text-green-400 font-semibold text-lg mb-4">All Company</p>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>My Experience</h2>
@@ -94,31 +94,31 @@ function Experience() {
             </div>
             </div>
             <div className="max-w-5xl mx-auto">
-                <div className="relative" style={{ minHeight: `${experience.length * 400}px` }}>
+                <div className="relative">
                     {/* animate timeline */}
-                    <div className="timeline-line absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-slate-700 rounded-full overflow-hidden">
+                    <div className="timeline-line absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-slate-700 rounded-full overflow-hidden">
   <div className={`w-full bg-gradient-to-b from-green-500 via-green-400 to-green-300 rounded-full transition-all duration-2000 ease-out`} style={{ height: `${timelineFillPercentage}%` }}>
     <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-green-300 to-transparent"></div>
   </div>
 </div>
                     {experience.map((exp, index) => {
                     return (
-                        <div key={index} className={`experience-item relative flex items-center mb-32 ${index%2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} transition-all duration-300 ${isVisible.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`} data-index={index} style={{transitionDelay: `${index * 300+800}ms`,
-                            transform: isVisible.includes(index) ? 'translateY(0)' : index%2===0 ? 'translateX(-50px) translateY(20px)' : 'translateX(50px) translateY(20px)'}}>
+                        <div key={index} className={`experience-item relative flex items-center mb-16 md:mb-32 ${index%2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} transition-all duration-700 ${isVisible.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`} data-index={index} style={{transitionDelay: `${index * 150 + 200}ms`,
+                            transform: isVisible.includes(index) ? 'translateY(0)' : 'translateY(20px)'}}>
                             {/* animated timeline dots */}
-                            <div className={`absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-2 shadow-lg ${isVisible.includes(index) ? 'scale-110' : 'scale-0'} `} style={{transitionDelay: `${index * 300 + 1200}ms`}}>
+                            <div className={`absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full border-2 shadow-lg transition-all duration-500 ${isVisible.includes(index) ? 'scale-110' : 'scale-0'} `} style={{transitionDelay: `${index * 150 + 300}ms`}}>
                                 <div className='absolute inset-0 bg-green-500 rounded-full'></div>
                                 <div className='absolute inset-0 bg-green-400 rounded-full'></div>
                             </div>
                             {/* content cards */}
-                            <div className={`ml-20 md:ml-0 md:w-1/2 ${ index %2===0? "md:pr-12":"md:pl-12"}`}>
-                            <div className={`bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700 hover:border-green-500 transition-all duration-500 transform hover:scale-105 hover:shadow-blue-800/20 group`}>
+                            <div className={`ml-12 sm:ml-16 md:ml-0 md:w-1/2 ${ index %2===0? "md:pr-12":"md:pl-12"}`}>
+                            <div className={`bg-white/5 backdrop-blur-xl p-5 md:p-8 rounded-2xl shadow-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 transform hover:scale-[1.02] md:hover:scale-105 hover:shadow-green-500/10 hover:shadow-2xl group`}>
                             <div className="flex items-center gap-3 mb-6 group-hover:transform group-hover:scale-105 transition-all duration-300">
                             <div className='w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:bg-green-500 transition-all duration-300 group-hover:rotate-6'>
                                 <Briefcase className='w-6 h-6 text-white' />
                             </div>
                             <div>
-                                <h3 className='text-xl font-black text-white group-hover:text-green-400 transition-colors duration-300'>{exp.company}</h3>
+                                <h3 className='text-base sm:text-xl font-black text-white group-hover:text-green-400 transition-colors duration-300'>{exp.company}</h3>
                                 <div className='flex items-center gap-2 text-green-400 text-sm'>
                                     <Calendar className='w-4 h-4' />
                                     {exp.period}
@@ -134,7 +134,7 @@ function Experience() {
                                 </div>
                             </div>
                             {/* Description */}
-                            <div className="text-gray-300 mb-6 leading-relaxed group-hover:Text-white transition-all duration-300">{exp.description}</div>
+                            <div className="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed group-hover:text-white transition-all duration-300">{exp.description}</div>
                             {/* Achievements */}
                             <div className="mb-6">
                                 <h5 className='font-semilbold text-white mb-3 flex items-center gap-2 group-hover:text-green-400 transition-all duration-300'>

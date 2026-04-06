@@ -10,7 +10,7 @@ function Publications() {
                     setIsVisible(true);
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.1 }
         );
         
         const element = document.getElementById('publications');
@@ -50,11 +50,11 @@ function Publications() {
                     
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                     {publications.map((pub, index) => (
                         <div 
                             key={index}
-                            className={`bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                            className={`bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-[1.02] md:hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             <div className="flex items-center mb-4">

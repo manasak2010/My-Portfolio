@@ -16,7 +16,7 @@ function Hero() {
         }
     };
     return (
-        <section id="home" className='min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-900 '>
+        <section id="home" className='min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-900 pt-24 lg:pt-0'>
             {/* animated bg elements */}
             <div className="absolute inset-0">
                 {/* <div className="absolute top-20 left-10 w-72 h-72 bg-green-600/10 rounded-full-blur-3xl"></div> */}
@@ -24,17 +24,17 @@ function Hero() {
                 <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-green-600/5 to-transparent"></div>
             </div>
 
-            <div className="container mx-auto px-12 py-2 relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-2 relative z-10">
                 <div className="grid lg:grid-cols-[60%_40%] gap-8 items-center">
                     {/* left content */}
                     <div className="space-y-8">
                         <div className="space-y-4">
                             <p className={`text-green-400 font-semibold text-lg transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}> Hi there!</p>
-                            <h1 className={`text-5xl md:text-7xl font-black text-white leading-tight transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                            <h1 className={`text-3xl sm:text-5xl md:text-7xl font-black text-white leading-tight transition-all duration-1000 delay-200 min-h-[8rem] sm:min-h-[9rem] md:min-h-[12rem] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                                 <span className="text-white">I'm </span>
                                 <TypeAnimation
                                     wrapper="span"
-                                    className="whitespace-nowrap max-w-xl text-green-400"
+                                    className="text-green-400"
                                     sequence={[
                                         "Software Engineer",
                                         2000,                                        
@@ -54,12 +54,12 @@ function Hero() {
                                 <span className='text-white'>Manasa Kumari</span>
                             </h1>
 
-                            <p className={`text-gray-300 text-lg leading-relaxed max-w-xl transition-all duration-1000 delay-400 white-space: nowrap ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                            <p className={`text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                                 {/* AI Engineer optimizing models, <br />
                         Full Stack Developer building their interfaces. <br />
                         My passion lives where tensor calculations meet user interactions...</p> */}
                                 I build intelligent applications end-to-end, from optimizing the AI model to crafting the user interface. </p>
-                            <button onClick={scrollToAbout} className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-300 flex items-center gap-2 group shadow-lg hover:shadow-xl font-medium hover:scale-105 cursor-pointer">
+                            <button onClick={scrollToAbout} className="bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-green-700 transition-all duration-300 flex items-center gap-2 group shadow-lg hover:shadow-xl font-medium hover:scale-105 cursor-pointer">
                                 LEARN MORE
                                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                             </button>
@@ -81,9 +81,9 @@ function Hero() {
                     {/* right content */}
                     <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                         <div className="relative">
-                            <div className="w-full max-w-lg mx-auto">
+                            <div className="w-full max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
                                 <div className="relative group border-4 border-green-500 rounded-2xl p-3 group-hover:border-green-400">
-                                    <img src={ManasaPic} alt="Manasa Kumari" className="w-120 rounded-2xl text-white shadow-2xl transition-all duration-500 group-hover:scale-105" />
+                                    <img src={ManasaPic} alt="Manasa Kumari" className="w-full rounded-2xl text-white shadow-2xl transition-all duration-500 group-hover:scale-105" />
                                 </div>
                             </div>
                             <div className="absolute -top-4 right-4 w-20 h-20 bg-green-600 rounded-2xl opacity-20"></div>

@@ -64,10 +64,10 @@ function Header() {
         </div>
 
         {/* Desktop Menus */}
-        <nav className="hidden md:flex space-x-8 ">
+        <nav className="hidden lg:flex space-x-4 xl:space-x-8 ">
             {navitems.map((item, index) => {
                 return <button key={item.name}
-                                onClick={() => scrollToSection(item.href)} className="text-gray-300 hover:text-green-400 transition-all duration-300 font-medium relative group cursor-pointer" style={{animationDelay: `${index * 0.1}s`}} >{item.name}
+                                onClick={() => scrollToSection(item.href)} className="text-gray-300 hover:text-green-400 transition-all duration-300 font-medium relative group cursor-pointer text-sm xl:text-base" style={{animationDelay: `${index * 0.1}s`}} >{item.name}
                 <span className="absolute left-0 -bottom-2 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>  
                 {/* {for the line underlining the text} */}
                 </button>
@@ -79,18 +79,18 @@ function Header() {
             link.download = 'ManasaKumari_Resume.pdf';
             link.click();
         }}
-        className="hidden md:flex items-center gap-2 bg-green-600 text-white px-6 py-2.5 rounded hover:bg-green-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105 cursor-pointer">
+        className="hidden lg:flex items-center gap-2 bg-green-600 text-white px-4 xl:px-6 py-2.5 rounded hover:bg-green-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105 cursor-pointer text-sm xl:text-base">
           Download Resume Now
         </button>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white cursor-pointer" onClick={() => setIsOpen(!isMenuOpen)}>
+        <button className="lg:hidden text-white cursor-pointer" onClick={() => setIsOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         </div>
         {/* Mobile Navigation */}
         {isMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 border-t border-slate-800 pt-4 bg-slate-800 rounded-lg shadow-lg ">
+            <nav className="lg:hidden mt-4 pb-4 border-t border-slate-800 pt-4 bg-slate-800 rounded-lg shadow-lg ">
                 {navitems.map((item)=>{
                     return <button key={item.name}
                                 onClick={() => scrollToSection(item.href)} className="block text-gray-300 hover:text-green-400 hover:bg-slate-700 transition-all duration-300 font-medium py-3 px-4 w-full text-left rounded-lg cursor-pointer">{item.name}</button>
