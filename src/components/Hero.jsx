@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
-import ManasaPic from '../assets/headshot.jpg';
+import ManasaPic from '../assets/headshot.jpeg';
 import { TypeAnimation } from 'react-type-animation';
 
 
